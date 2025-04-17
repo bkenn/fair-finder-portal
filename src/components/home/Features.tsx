@@ -4,52 +4,52 @@ import { CalendarCheck, GraduationCap, Globe, UserCheck, BarChart, Clock } from 
 const features = [
   {
     icon: <CalendarCheck className="h-10 w-10 text-primary" />,
-    title: "Easy Registration",
-    description:
-      "Streamlined process for registering your schools for upcoming education fairs.",
+    title: "Seamless Registration",
+    description: "Intuitive process for registering your schools with minimal effort.",
+    color: "bg-primary/10 dark:bg-primary/20"
   },
   {
     icon: <GraduationCap className="h-10 w-10 text-primary" />,
-    title: "School Management",
-    description:
-      "Manage multiple schools and their representatives from a single dashboard.",
+    title: "Comprehensive Management",
+    description: "Effortlessly manage multiple schools and their representatives.",
+    color: "bg-primary/10 dark:bg-primary/20"
   },
   {
     icon: <Globe className="h-10 w-10 text-primary" />,
-    title: "Global Opportunities",
-    description:
-      "Access to education fairs worldwide with detailed information about each event.",
+    title: "Global Reach",
+    description: "Access to worldwide education fairs with detailed event insights.",
+    color: "bg-primary/10 dark:bg-primary/20"
   },
   {
     icon: <UserCheck className="h-10 w-10 text-primary" />,
-    title: "Attendance Tracking",
-    description:
-      "Track which fairs your schools are registered for and manage attendees.",
+    title: "Advanced Tracking",
+    description: "Real-time tracking of fair registrations and attendee management.",
+    color: "bg-primary/10 dark:bg-primary/20"
   },
   {
     icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: "Performance Analytics",
-    description:
-      "Detailed insights on fair performance and student engagement metrics.",
+    title: "Performance Insights",
+    description: "Deep analytics on fair performance and student engagement.",
+    color: "bg-primary/10 dark:bg-primary/20"
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
-    title: "Reminder System",
-    description:
-      "Never miss a registration deadline with our automated reminder system.",
+    title: "Smart Reminders",
+    description: "Automated notifications to keep you informed and prepared.",
+    color: "bg-primary/10 dark:bg-primary/20"
   },
 ];
 
 const Features = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
             Powerful Tools for School Representatives
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to manage your schools' participation in education fairs.
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            A comprehensive suite of tools designed to streamline your education fair management.
           </p>
         </div>
         
@@ -57,11 +57,11 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              className={`p-6 rounded-lg border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all duration-300 ${feature.color}`}
             >
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
             </div>
           ))}
         </div>
