@@ -3,6 +3,7 @@ import { Calendar, MapPin, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 export interface FairProps {
   id: string;
@@ -55,8 +56,11 @@ const FairCard = ({ fair }: { fair: FairProps }) => {
         <Button
           variant={fair.isRegistered ? "outline" : "default"}
           className="w-full"
+          asChild
         >
-          {fair.isRegistered ? "View Details" : "Register Now"}
+          <Link to={`/fairs/${fair.id}`}>
+            {fair.isRegistered ? "View Details" : "Register Now"}
+          </Link>
         </Button>
       </CardFooter>
     </Card>
